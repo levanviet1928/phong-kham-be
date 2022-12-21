@@ -23,3 +23,7 @@ spring:
     web:
       pageable:
         one-indexed-parameters: true
+
+app:
+  jwtSecret: JWTSuperSecretKey
+  jwtExpirationInMs: 86400000
