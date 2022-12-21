@@ -1,0 +1,25 @@
+server:
+  port: 8012
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:8306/his
+    username: root
+    password: root@123
+    driver-class-name: org.mariadb.jdbc.Driver
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db.changelog-root.xml
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
