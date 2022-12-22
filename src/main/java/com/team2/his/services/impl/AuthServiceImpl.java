@@ -6,25 +6,26 @@ import com.team2.his.model.ResponseModel;
 import com.team2.his.model.auth.RegisterRequest;
 import com.team2.his.repostiris.AccountRepository;
 import com.team2.his.services.AuthService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
-    @Autowired
-    private AccountRepository userRepository;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-    @Override
+
+    private final AccountRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
     public ResponseModel register(RegisterRequest request) {
         try {
             ResponseModel model = new ResponseModel();
             String message = "";
-            boolean existLoginPhone = userRepository.existsByUserName(request.getUserName());
-            if (existLoginPhone) {
-                message = "Number code is exist, please input other number ";
+            boolean existUserName = userRepository.existsByUserName(request.getUserName());
+            if (existUserName) {
+                message = "User name is exist, please input other user name ";
                 BaseModel error = new BaseModel(HttpStatus.BAD_REQUEST.value(), message);
                 model.setData(error);
                 model.setDescription(message);

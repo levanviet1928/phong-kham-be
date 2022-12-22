@@ -12,13 +12,9 @@ import javax.validation.constraints.NotEmpty;
 public class LoginRequest {
     @NotBlank
     @NotEmpty(message = "User name cannot be null")
-    private String loginId;
+    private String userName;
 
     @NotBlank
     @NotEmpty
     private String password;
-
-    @NotBlank
-    @NotEmpty(message = "device token cannot be null")
-    private String deviceToken;
 }

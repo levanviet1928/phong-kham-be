@@ -1,5 +1,8 @@
 package com.team2.his.entitis;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -16,6 +19,7 @@ import java.util.UUID;
 @Table(name = "account")
 @SQLDelete(sql = "UPDATE account set is_deleted = 1")
 @Where(clause = "is_deleted = false ")
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Account extends BaseEntity{
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -27,6 +31,7 @@ public class Account extends BaseEntity{
     private String userName;
 
     @Column(name = "password")
+    @JsonIgnore
     private String password;
 
 }

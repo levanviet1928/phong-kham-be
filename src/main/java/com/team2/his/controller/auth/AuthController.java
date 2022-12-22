@@ -30,12 +30,15 @@ public class AuthController {
     private final AuthService authService;
     private final JwtTokenProvider tokenProvider;
 
-    @PostMapping("/signin/teacher")
+    @PostMapping("/signin")
     public ResponseEntity<?> authenticateUserTeacher(@Valid @RequestBody LoginRequest request) {
         long start = System.currentTimeMillis();
         try {
-            Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLoginId(), request.getPassword()));
-            Account account = authService.getAccountInfoByLoginId(request.getLoginId());
+            Authentication authenticate = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(request.getUserName(), request.getPassword())
+            );
+
+            Account account = authService.getAccountInfoByLoginId(request.getUserName());
             if (account == null){
                 return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
             }
