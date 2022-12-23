@@ -1,6 +1,6 @@
 package com.team2.his.repostiris;
 
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

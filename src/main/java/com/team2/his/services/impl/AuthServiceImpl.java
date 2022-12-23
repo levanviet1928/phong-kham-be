@@ -1,13 +1,12 @@
 package com.team2.his.services.impl;
 
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import com.team2.his.model.BaseModel;
 import com.team2.his.model.ResponseModel;
 import com.team2.his.model.auth.RegisterRequest;
 import com.team2.his.repostiris.AccountRepository;
 import com.team2.his.services.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
