@@ -1,4 +1,4 @@
-package com.team2.his.entitis;
+package com.team2.his.entity;
 
 import lombok.Getter;
 import lombok.Setter;

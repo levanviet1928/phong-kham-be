@@ -1,6 +1,6 @@
 package com.team2.his.controller.auth;
 
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import com.team2.his.model.ResponseModel;
 import com.team2.his.model.auth.JwtAuthenticationResponse;
 import com.team2.his.model.auth.LoginRequest;

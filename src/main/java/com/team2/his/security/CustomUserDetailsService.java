@@ -1,6 +1,6 @@
 package com.team2.his.security;
 
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import com.team2.his.repostiris.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

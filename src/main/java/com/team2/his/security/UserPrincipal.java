@@ -1,6 +1,6 @@
 package com.team2.his.security;
 
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;

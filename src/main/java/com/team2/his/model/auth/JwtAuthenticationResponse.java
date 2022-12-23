@@ -2,7 +2,7 @@ package com.team2.his.model.auth;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.team2.his.entitis.Account;
+import com.team2.his.entity.Account;
 import lombok.Data;
 
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
