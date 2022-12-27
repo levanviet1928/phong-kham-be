@@ -2,9 +2,9 @@ server:
   port: 8012
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:8306/his
+    url: jdbc:mariadb://localhost:3306/his
     username: root
-    password: root@123
+    password: 123456
     driver-class-name: org.mariadb.jdbc.Driver
   jackson:
     serialization:
