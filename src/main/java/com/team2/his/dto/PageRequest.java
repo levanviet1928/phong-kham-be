@@ -54,7 +54,7 @@ public class PageRequest {
     }
 
     protected Sort getDefaultSort() {
-        return Sort.by(Sort.Direction.DESC, "createdTime");
+        return Sort.by(Sort.Direction.DESC, "isDeleted");
     }
 
     @JsonIgnore
