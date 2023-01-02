@@ -19,7 +19,6 @@ import java.util.UUID;
 @Table(name = "account")
 @SQLDelete(sql = "UPDATE account set is_deleted = 1")
 @Where(clause = "is_deleted = false ")
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Account extends BaseEntity{
     @Id
     @GeneratedValue(generator = "uuid2")

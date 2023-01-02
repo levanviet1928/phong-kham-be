@@ -17,7 +17,6 @@ import java.util.UUID;
 @Table(name = "patient")
 @SQLDelete(sql = "UPDATE patient set is_deleted = 1")
 @Where(clause = "is_deleted = false ")
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PatientEntity extends BaseEntity {
     @Id
 

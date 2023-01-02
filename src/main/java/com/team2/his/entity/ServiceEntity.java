@@ -18,7 +18,6 @@ import java.util.UUID;
 @Table(name = "service")
 @SQLDelete(sql = "UPDATE service set is_deleted = 1")
 @Where(clause = "is_deleted = false ")
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ServiceEntity extends BaseEntity {
 
     @Id
@@ -32,6 +31,6 @@ public class ServiceEntity extends BaseEntity {
     @Column(name = "service_name")
     private String  ServiceName;
     @Column(name = "price")
-    private BigDecimal Price;
+    private Integer Price;
 
 }
