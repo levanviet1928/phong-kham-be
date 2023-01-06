@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
@@ -55,5 +57,9 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public Account getAccountInfoByLoginId(String loginId) {
         return userRepository.findByUserName(loginId).orElse(null);
+
+
     }
+
 }
+
